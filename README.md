@@ -1,27 +1,52 @@
-# Apex Detailing — premium detailing website concept
+# APEX DETAILING — Premium Automotive Website
 
-A premium, responsive single-page website for **Apex Detailing**, a _fictional_ luxury automotive detailing
-business. Built by **NORTHLINE** as a portfolio concept with React, TypeScript, Vite and Tailwind CSS.
+A modern, premium automotive detailing website concept designed and developed by **NORTHLINE Digital Studio**.
 
-> Apex Detailing is not a real company. Contact details, prices and imagery are placeholders, and the site
-> contains no testimonials or business claims that would need verifying.
+Built to help automotive detailing businesses establish a strong online presence, showcase their services, and
+generate customer inquiries.
 
-## Tech stack
+> **Note:** APEX DETAILING is a fictional brand created for demonstration purposes. This project is not affiliated
+> with an actual automotive detailing business. Pricing, contact details and business information are
+> illustrative placeholders, and the site contains no testimonials or claims that would need verifying.
 
-| Tool                                          | Why                                                         |
-| --------------------------------------------- | ----------------------------------------------------------- |
-| React 19 + TypeScript                         | Typed, reusable components                                  |
-| Vite                                          | Fast dev server and optimized production build              |
-| Tailwind CSS v4                               | Design tokens and utility styling, with no runtime cost     |
-| lucide-react                                  | Tree-shaken SVG icons (only the icons used are bundled)     |
-| @fontsource (Inter, Cormorant Garamond)       | Self-hosted fonts, so the page makes no third-party font requests |
-| oxlint                                        | Fast linting                                                |
+## ✨ Features
 
-## Getting started
+- Premium dark automotive design
+- Fully responsive, mobile-first layout
+- Modern typography and subtle scroll animations
+- Service showcase and pricing packages
+- Automotive image gallery
+- Interactive navigation with an accessible mobile menu
+- Quote request form with frontend validation and honest success/error states
+- SEO-friendly structure and metadata
+
+## 🛠️ Tech Stack
+
+| Tool                                    | Why                                                               |
+| --------------------------------------- | ----------------------------------------------------------------- |
+| React 19 + TypeScript                   | Typed, reusable components                                        |
+| Vite                                    | Fast dev server and optimized production build                    |
+| Tailwind CSS v4                         | Design tokens and utility styling, with no runtime cost           |
+| Lucide Icons (`lucide-react`)           | Tree-shaken SVG icons (only the icons used are bundled)           |
+| @fontsource (Inter, Cormorant Garamond) | Self-hosted fonts, so the page makes no third-party font requests |
+| oxlint                                  | Fast linting                                                      |
+
+## 🎨 Design Concept
+
+The website features a sophisticated automotive aesthetic with:
+
+- Deep charcoal backgrounds
+- Champagne gold accents
+- Cinematic automotive imagery
+- Clean layouts and elegant typography
+
+## 🚀 Getting Started
 
 Requires **Node.js 20.19+ or 22.12+** (check with `node -v`).
 
 ```bash
+git clone https://github.com/il1mated/northline-premium-detailing.git
+cd northline-premium-detailing
 npm install        # install dependencies (first time only)
 npm run dev        # start the dev server at http://localhost:5173
 ```
@@ -34,7 +59,7 @@ npm run build      # type-check + production build into dist/
 npm run preview    # serve the production build at http://localhost:4173
 ```
 
-## Project structure
+## 📁 Project Structure
 
 ```
 public/                  favicon.svg, robots.txt (copied as-is)
@@ -50,7 +75,7 @@ src/
 index.html               SEO metadata (title, description, Open Graph)
 ```
 
-## Customizing for a real client
+## 🔧 Customizing for a Real Client
 
 1. **Business details:** edit `src/data/site.ts` (phone, email, service area, hours).
 2. **Services and packages:** edit `src/data/services.ts` and `src/data/packages.ts`. Then remove the
@@ -65,7 +90,7 @@ index.html               SEO metadata (title, description, Open Graph)
 5. **SEO:** in `index.html`, add `og:url`, `og:image` and `<link rel="canonical">` using the real domain.
 6. **Footer:** remove the "fictional business" line once the site belongs to a real client.
 
-## The quote form
+## 📨 The Quote Form
 
 The form validates in the browser: required fields, email format, length limits and accessible error
 messages. What happens on submit depends on whether an endpoint is configured:
@@ -86,23 +111,21 @@ VITE_QUOTE_ENDPOINT=https://formspree.io/f/your-form-id
 `VITE_` variables are baked in at **build time**, so set them in your hosting provider's environment
 settings and rebuild.
 
-## Deployment
+## 🌐 Deployment
 
 `npm run build` outputs a fully static site to `dist/`. Any static host works.
 
-**Vercel:** import the GitHub repo at vercel.com/new. Vite is auto-detected
-(build command `npm run build`, output directory `dist`). Add `VITE_QUOTE_ENDPOINT` under
-Settings → Environment Variables if you need it.
+- **Vercel:** import the GitHub repo at vercel.com/new. Vite is auto-detected (build command `npm run build`,
+  output directory `dist`). Add `VITE_QUOTE_ENDPOINT` under Settings → Environment Variables if you need it.
+- **Netlify:** "Add new site" → "Import an existing project" → pick the repo. Set the build command to
+  `npm run build` and the publish directory to `dist`.
+- **Cloudflare Pages:** connect the repo, choose the "Vite" framework preset (or build `npm run build`,
+  output `dist`).
+- **Manual:** run `npm run build` and upload the contents of `dist/` to any static web server.
 
-**Netlify:** "Add new site" → "Import an existing project" → pick the repo. Set the build command
-to `npm run build` and the publish directory to `dist`.
+## 📱 Responsive Design & Accessibility
 
-**Cloudflare Pages:** connect the repo, choose the "Vite" framework preset (or build `npm run build`,
-output `dist`).
-
-**Manual:** run `npm run build` and upload the contents of `dist/` to any static web server.
-
-## Quality notes
+Optimized for desktop, tablets and mobile devices.
 
 - Semantic landmarks (`header`, `nav`, `main`, `section`s with `aria-labelledby`, `footer`), skip link and a
   single `h1`.
@@ -110,3 +133,13 @@ output `dist`).
 - Keyboard-accessible mobile menu (Escape closes it, and focus returns to the toggle).
 - Animations respect `prefers-reduced-motion`.
 - Responsive images (`srcset`/`sizes`), lazy loading below the fold, and a high-priority hero image.
+
+## 📌 Project Status
+
+Portfolio concept — actively developed.
+
+## 👨‍💻 Created By
+
+**NORTHLINE Digital Studio**
+
+Web Design • Frontend Development • Digital Experiences
